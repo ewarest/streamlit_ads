@@ -8,7 +8,7 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_data(dataset):
     df = pd.read_csv(dataset)
     return df
